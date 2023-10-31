@@ -1,0 +1,136 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.me-details {
+    width: 100%;
+}
+
+.me-pic {
+    display: flex;
+    justify-content: center;
+}
+
+.me-pic img {
+    border-radius: 50%;
+}
+
+.me-content p {
+    text-align: center;
+}
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background-color: #F1F1F1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  
+.sidebar button {
+    background-color: #F1F1F1;
+    display: block;
+    color: black;
+    padding: 16px;
+    width: 100%;
+    text-decoration: none;
+    border: none;
+}
+
+/* About Active */
+.sidebar #about.active {
+    background-color: #008073;
+    color: white;
+}
+
+/* Experience Active */
+.sidebar #experience.active {
+    background-color: #00BCD4;
+    color: white;
+}
+
+/* Projects Active */
+.sidebar #projects.active {
+    background-color: #3F51B5;
+    color: white;
+}
+
+/* Skills Active */
+.sidebar #skills.active {
+    background-color: #9C27B0;
+    color: white;
+}
+
+/* Education Active */
+.sidebar #education.active {
+    background-color: #FF9800;
+    color: white;
+}
+
+/* Contact Active */
+.sidebar #contact.active {
+    background-color: #795548;
+    color: white;
+}
+
+/* Experience Hover */
+.sidebar #experience:hover:not(.active) {
+    background-color: #00BCD4;
+    color: white;
+}
+
+/* Projects Tab Hover */
+.sidebar #projects:hover:not(.active) {
+    background-color: #3F51B5;
+    color: white;
+}
+
+/* Skills Tab Hover */
+.sidebar #skills:hover:not(.active) {
+    background-color: #9C27B0;
+    color: white;
+}
+
+/* Education Tab Hover */
+.sidebar #education:hover:not(.active) {
+    background-color: #FF9800;
+    color: white;
+}
+
+/* Contact Tab Hover */
+.sidebar #contact:hover:not(.active) {
+    background-color: #795548;
+    color: white;
+}
+
+div.content {
+    margin-left: 300px;
+    padding: 1px 16px;
+    min-height: 800px;
+}
+  
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar button {
+        float: left;
+    }
+    div.content {
+        margin-left: 0;
+    }
+}
+  
+@media screen and (max-width: 400px) {
+    .sidebar button {
+        text-align: center;
+        float: none;
+    }
+}
