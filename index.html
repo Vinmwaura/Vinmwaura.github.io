@@ -21,22 +21,81 @@
             <hr/>
 
             <nav>
-                <button class="active" id="about">About</button>
-                <button id="experience">Experience</button>
-                <button id="projects">Projects</button>
-                <button id="skills">Skills</button>
-                <button id="education">Education</button>
-                <button id="contact">Contact</button>
+                <button class="tablinks" id="about" onclick="openTab(event)">About</button>
+                <button class="tablinks" id="experience" onclick="openTab(event)">Experience</button>
+                <button class="tablinks" id="projects" onclick="openTab(event)">Projects</button>
+                <button class="tablinks" id="skills" onclick="openTab(event)">Skills</button>
+                <button class="tablinks" id="education" onclick="openTab(event)">Education</button>
+                <button class="tablinks" id="contact" onclick="openTab(event)">Contact</button>
             </nav>
         </div>
 
         <div class="content">
-            <h2>Content goes here</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut sodales ipsum, at tristique turpis. Phasellus sit amet blandit enim. Aenean bibendum blandit lacus, vehicula vulputate magna fermentum lacinia. Aliquam a mi placerat, varius libero vitae, laoreet augue. Sed eget sem lorem. Vivamus placerat mauris tempor ipsum tincidunt ultricies. Praesent rhoncus, felis nec sollicitudin facilisis, metus eros accumsan ligula, vitae mollis sem felis et elit. Nunc id purus a urna vestibulum semper. Mauris in odio egestas velit euismod congue. Aliquam ornare, risus quis cursus porttitor, lorem nulla consectetur eros, at iaculis lacus orci non ex. Nunc finibus eros sed odio elementum consectetur. Morbi dignissim, mi auctor lobortis fermentum, ligula nunc semper nibh, id ornare eros libero at nisi. Nunc molestie ipsum arcu, eget mollis risus euismod sit amet.</p>
-            <p>Fusce bibendum nisi mi, vitae mollis odio rutrum eu. Donec sed urna eget arcu placerat lacinia non ac neque. Mauris molestie elit felis, in vestibulum libero scelerisque ut. Sed elementum libero ut est cursus, sit amet sollicitudin massa imperdiet. Phasellus nulla tortor, lacinia sed ex id, mattis pharetra tellus. Mauris facilisis eget velit id finibus. Sed ultrices tincidunt pretium. Morbi id lectus lectus. </p>
-            <p>Vestibulum condimentum egestas ligula a iaculis. Donec libero mi, euismod a mauris sit amet, ullamcorper facilisis diam. Duis molestie volutpat luctus. Quisque sed sem mattis, consequat libero ut, elementum ipsum. Sed ac rhoncus nunc. Pellentesque lobortis ultrices mi a tempor. Cras lacinia in dui quis pretium. Integer scelerisque blandit faucibus. Donec mattis dolor vel gravida porttitor. Aliquam rutrum vehicula quam id dictum. </p>
-            <p>Nullam pellentesque dictum molestie. Cras nec dui nec velit porta viverra ornare sed arcu. Phasellus faucibus rhoncus nisi, in consequat nisi placerat at. Nullam commodo mauris lectus, ut condimentum leo congue et. Duis tellus nulla, rutrum a tortor a, laoreet blandit mauris. Sed viverra dolor laoreet, porta ante non, condimentum ipsum. Suspendisse ornare diam pulvinar erat congue elementum. Fusce volutpat vestibulum posuere. Aliquam erat volutpat. Fusce posuere lobortis arcu in suscipit. </p>
-            <p>Curabitur magna justo, viverra in nibh quis, condimentum consequat lorem. In vitae consequat sapien. In laoreet dapibus neque, eget pulvinar orci laoreet sit amet. Maecenas aliquam dolor et mauris dictum, non fringilla erat vestibulum. Sed id tempus massa. Pellentesque rhoncus quam et diam blandit venenatis. In hac habitasse platea dictumst. Etiam ac diam ac nulla consequat iaculis nec id dolor. Sed fermentum efficitur elit, eu malesuada nulla consequat nec. Donec placerat quam lorem, nec gravida nibh pharetra ac. Etiam varius eleifend ligula ac suscipit. Praesent aliquam a purus vulputate consequat. Proin iaculis nec leo quis egestas. Nulla facilisi. Suspendisse nec finibus arcu, non tristique orci. </p>
+            <!-- Tab content -->
+            <div id="aboutTab" class="tabcontent">
+                <h3>About</h3>
+                <p>About content goes here.</p>
+            </div>
+            
+            <div id="experienceTab" class="tabcontent">
+                <h3>Experience</h3>
+                <p>Experience content goes here.</p>
+            </div>
+            
+            <div id="projectsTab" class="tabcontent">
+                <h3>Projects</h3>
+                <p>Projects content goes here.</p>
+            </div>
+
+            <div id="skillsTab" class="tabcontent">
+                <h3>Skills</h3>
+                <p>Skills content goes here.</p>
+            </div>
+
+            <div id="educationTab" class="tabcontent">
+                <h3>Education</h3>
+                <p>Education content goes here.</p>
+            </div>
+
+            <div id="contactTab" class="tabcontent">
+                <h3>Contact</h3>
+                <p>Contact content goes here.</p>
+            </div>
         </div>
+
+        <script>
+            function openTab(event) {
+                var tabName = event.target.id + "Tab";
+
+                // Get all elements with class="tabcontent" and hide them
+                var tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                
+                // Get all elements with class="tablinks" and remove the class "active"
+                var tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                // Show the current tab, and add an "active" class to the button that opened the tab
+                document.getElementById(tabName).style.display = "block";
+                event.currentTarget.className += " active";
+
+            }
+            
+            document.addEventListener("DOMContentLoaded", (event) => {
+                console.log("DOM fully loaded and parsed");
+                // Get all elements with class="tablinks".
+                var tablink = document.getElementsByClassName("tablinks");
+                
+                // Activate first link.
+                if (tablink !== undefined) {
+                    tablink[0].click()
+                }
+            });
+
+        </script>
     </body>
 </html>
