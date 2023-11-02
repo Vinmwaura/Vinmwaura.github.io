@@ -33,33 +33,121 @@
         <div class="content">
             <!-- Tab content -->
             <div id="aboutTab" class="tabcontent">
-                <h3>About</h3>
-                <p>About content goes here.</p>
+                <div class="container">
+                    <div class="panel">
+                        <h1 class="panel-title">About</h1>
+                        <div class="panel-content">
+                            <p>
+                                I'm a passionate and versatile Full Stack Developer with a deep love for problem solving and crafting digital solutions
+                                that empower businesses and delight users. As a web developer, I enjoy using my obsessive attention to detail, my unequivocal love for making things, and my mission-driven work ethic to literally change the world. With five years of experience in the field, i believe i have a lot to offer to any organization.
+                            </p>
+                            <p>
+                                In addition i am a Machine Learning enthusiast with an interest in learning and implementing A.I solutions to various problems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <div id="experienceTab" class="tabcontent">
-                <h3>Experience</h3>
-                <p>Experience content goes here.</p>
+                <div class="container">
+                    <div class="panel">
+                        <h1 class="panel-title">Experience</h1>
+                        <div class="panel-content">
+                            <h2>Upande Ltd</h2>
+                            <span>Full Stack Developer</span>
+                            <hr/>
+                            <ul>
+                                <li>Contributed in developing interfaces and backend implemenations for IoT solutions.</li>
+                                <li>Contributed in developing interfaces and backend implmentations for GIS solutions.</li>
+                                <li>Developed best practices for coding style and development practices for all projects.</li>
+                                <li>Technology: Django, Flask, Frappe, PostgreSQL, PostGIS,  HTML5, CSS, JS, Bootstrap, jQuery, Ext JS, CARTO.js, Leaflet, Thingsboard.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <div id="projectsTab" class="tabcontent">
-                <h3>Projects</h3>
-                <p>Projects content goes here.</p>
+                <div class="container">
+                    <div class="panel">
+                        <h1 class="panel-title">Projects</h1>
+                        <div class="panel-content">
+                            <p>
+                                Here are some personal projects i have created:
+                                <h4><a href="https://github.com/Vinmwaura/Imager" target="_blank" rel="noopener noreferrer">Imager</a></h4>
+                                <p>This project is a simple image Sharing website that allows anyone to upload images for everyone to see written with Flask.</p>
+                                <p>
+                                    It includes various features such as:
+                                    <ul>
+                                        <li>Admin Panel for administration roles.</li>
+                                        <li>RESTful API using OAuth2.0.</li>
+                                        <li>Voting mechanism (Upvote / Downvote).</li>
+                                        <li>Email Verification, and Password Recovery functionality.</li>
+                                    </ul>
+                                </p>
+                                <h4><a href="https://github.com/Vinmwaura/Simple-Diffusion-Model" target="_blank" rel="noopener noreferrer">Simple Diffusion Model</a> + <a href="https://github.com/Vinmwaura/Web-Interface-Simple-Diffusion" target="_blank" rel="noopener noreferrer">Web Interface</a></h4>
+                                <p>
+                                    This project is a simple implementation of a Diffusion model together with a web interface for interacting with multiple trained models.
+                                </p>
+                                <h4><a href="https://github.com/Vinmwaura/Simple-Video-Diffusion" target="_blank" rel="noopener noreferrer">Simple Video Diffusion Model</a></h4>
+                                <p>
+                                    This project is a modification of the Simple Diffusion Model for generating videos instead of images. It only has command line interface.
+                                </p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="skillsTab" class="tabcontent">
-                <h3>Skills</h3>
-                <p>Skills content goes here.</p>
+                <div class="container">
+                    <div class="panel">
+                        <h1 class="panel-title">Skills</h1>
+                        <div class="panel-content">
+                            <p>
+                                I am well-versed in a variety of programming languages, frameworks, and tools, including but not limited to:
+                                <ul>
+                                    <li>Front-end: HTML5, CSS, JavaScript</li>
+                                    <li>Back-end: Django, Flask</li>
+                                    <li>Databases: PostgreSQL</li>
+                                    <li>DevOps: Docker</li>
+                                    <li>Version Control: Git</li>
+                                    <li>Datascience / Machine Learning Libraries: PyTorch, Numpy, Pandas, SciPy, OpenCV</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="educationTab" class="tabcontent">
-                <h3>Education</h3>
-                <p>Education content goes here.</p>
+                <div class="container">
+                    <div class="panel">
+                        <h1 class="panel-title">Education</h1>
+                        <div class="panel-content">
+                            <h2>2012-2017: University of Nairobi</h2>
+                            <ul>
+                                <li>Bachelor’s degree in Computer Science.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="contactTab" class="tabcontent">
-                <h3>Contact</h3>
-                <p>Contact content goes here.</p>
+                <div class="container">
+                    <div class="panel">
+                        <h1 class="panel-title">Contact</h1>
+                        <div class="panel-content">
+                            <h2>How to contant me:</h2>
+                            <ul>
+                                <li>Email: <a href="mailto:vinmwega@gmail.com">vinmwega@gmail.com</a></li>
+                                <li>GitHub: <a href="https://github.com/Vinmwaura" target="_blank" rel="noopener noreferrer">https://github.com/Vinmwaura</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -82,7 +170,6 @@
                 // Show the current tab, and add an "active" class to the button that opened the tab
                 document.getElementById(tabName).style.display = "block";
                 event.currentTarget.className += " active";
-
             }
             
             document.addEventListener("DOMContentLoaded", (event) => {

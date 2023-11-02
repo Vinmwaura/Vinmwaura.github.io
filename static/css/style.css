@@ -42,37 +42,67 @@ body {
     border: none;
 }
 
-/* About Active */
+/* About Panel Active */
+#aboutTab .panel-title {
+    background-color: #008073;
+}
+
+/* Experience Panel Active */
+#experienceTab .panel-title {
+    background-color: #00BCD4;
+}
+
+/* Projects Panel Active */
+#projectsTab .panel-title {
+    background-color: #3F51B5;
+}
+
+/* Skills Panel Active */
+#skillsTab .panel-title {
+    background-color: #9C27B0;
+}
+
+/* Education Panel Active */
+#educationTab  .panel-title {
+    background-color: #FF9800;
+}
+
+/* Contact Panel Active */
+#contactTab .panel-title {
+    background-color: #795548;
+}
+
+/* About Tabs Active */
 .sidebar #about.active {
     background-color: #008073;
     color: white;
 }
 
-/* Experience Active */
+/* Experience Tabs Active */
 .sidebar #experience.active {
     background-color: #00BCD4;
     color: white;
 }
 
-/* Projects Active */
+/* Projects Tabs Active */
 .sidebar #projects.active {
     background-color: #3F51B5;
     color: white;
 }
 
-/* Skills Active */
+/* Skills Tabs Active */
 .sidebar #skills.active {
     background-color: #9C27B0;
     color: white;
 }
 
-/* Education Active */
+/* Education Tabs Active */
 .sidebar #education.active {
     background-color: #FF9800;
     color: white;
 }
 
-/* Contact Active */
+/* Contact Tabs Active */
 .sidebar #contact.active {
     background-color: #795548;
     color: white;
@@ -118,7 +148,49 @@ div.content {
 .tabcontent {
     display: none;
 }
-  
+
+/* Panels */
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.panel {
+    margin-top: 100px;
+    min-height: 200px;
+    width: 900px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.panel-title {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    padding: 10px;
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+.panel-content {
+    padding: 20px;
+}
+
+#contactTab li {
+    padding-bottom: 15px;
+    list-style-type: none;
+}
+
+#contactTab a:link,
+#contactTab a:visited {
+    color: #795548;
+    text-decoration: none;
+}
+
+#contactTab a:hover {
+    text-decoration: solid;
+}
+
 @media screen and (max-width: 700px) {
     .sidebar {
         width: 100%;
@@ -131,11 +203,19 @@ div.content {
     div.content {
         margin-left: 0;
     }
+
+    .panel {
+        margin-top: 20px;
+    }
 }
   
 @media screen and (max-width: 400px) {
     .sidebar button {
         text-align: center;
         float: none;
+    }
+
+    .panel {
+        margin-top: 0;
     }
 }
